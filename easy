@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Kreuzworträtsel (Einfach)</title>
+<style>
+body { font-family: Helvetica, system-ui, sans-serif; background: #fff; color: #000; }
+#crossword { border-collapse: collapse; margin-bottom: 1em; }
+#crossword td { border: 1px solid #999; width: 2em; height: 2em; text-align: center; vertical-align: middle; position: relative; }
+#crossword td.black { background: #ccc; }
+#crossword .number { position: absolute; top: 0; left: 0; font-size: 0.7em; color: #0000A0; }
+.cell { width: 100%; height: 100%; border: none; font-size: 1em; text-transform: uppercase; }
+.cell:focus { outline: 2px solid #66f; }
+.cell.highlight { background-color: #cceeff; }
+ul { list-style: none; padding-left: 0; }
+ul li { margin: 0.2em 0; }
+ul li.highlight { background: #ffff99; }
+#check { margin-top: 1em; padding: 0.5em 1em; font-size: 1em; }
+.cell.correct { background-color: #d4edda; }
+.cell.wrong { background-color: #f8d7da; }
+</style>
+</head>
+<body>
+<h2>Einfaches Kreuzworträtsel</h2>
+<table id="crossword">
+<tr><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td><div class="number">1</div><input type="text" maxlength="1" data-row="0" data-col="4" data-solution="A" class="cell"/></td><td><input type="text" maxlength="1" data-row="0" data-col="5" data-solution="A" class="cell"/></td><td><input type="text" maxlength="1" data-row="0" data-col="6" data-solution="R" class="cell"/></td><td><input type="text" maxlength="1" data-row="0" data-col="7" data-solution="A" class="cell"/></td><td><input type="text" maxlength="1" data-row="0" data-col="8" data-solution="U" class="cell"/></td></tr>
+<tr><td class="black"></td><td class="black"></td><td><div class="number">2</div><input type="text" maxlength="1" data-row="1" data-col="2" data-solution="B" class="cell"/></td><td><input type="text" maxlength="1" data-row="1" data-col="3" data-solution="R" class="cell"/></td><td><input type="text" maxlength="1" data-row="1" data-col="4" data-solution="U" class="cell"/></td><td><input type="text" maxlength="1" data-row="1" data-col="5" data-solution="G" class="cell"/></td><td><input type="text" maxlength="1" data-row="1" data-col="6" data-solution="G" class="cell"/></td><td class="black"></td><td class="black"></td></tr>
+<tr><td><div class="number">3</div><input type="text" maxlength="1" data-row="2" data-col="0" data-solution="C" class="cell"/></td><td><input type="text" maxlength="1" data-row="2" data-col="1" data-solution="R" class="cell"/></td><td><input type="text" maxlength="1" data-row="2" data-col="2" data-solution="I" class="cell"/></td><td><input type="text" maxlength="1" data-row="2" data-col="3" data-solution="C" class="cell"/></td><td><input type="text" maxlength="1" data-row="2" data-col="4" data-solution="K" class="cell"/></td><td><input type="text" maxlength="1" data-row="2" data-col="5" data-solution="E" class="cell"/></td><td><input type="text" maxlength="1" data-row="2" data-col="6" data-solution="T" class="cell"/></td><td class="black"></td><td class="black"></td></tr>
+<tr><td class="black"></td><td class="black"></td><td><div class="number">4</div><input type="text" maxlength="1" data-row="3" data-col="2" data-solution="H" class="cell"/></td><td><input type="text" maxlength="1" data-row="3" data-col="3" data-solution="O" class="cell"/></td><td><input type="text" maxlength="1" data-row="3" data-col="4" data-solution="T" class="cell"/></td><td><input type="text" maxlength="1" data-row="3" data-col="5" data-solution="D" class="cell"/></td><td><input type="text" maxlength="1" data-row="3" data-col="6" data-solution="O" class="cell"/></td><td><input type="text" maxlength="1" data-row="3" data-col="7" data-solution="G" class="cell"/></td><td class="black"></td></tr>
+<tr><td class="black"></td><td><div class="number">5</div><input type="text" maxlength="1" data-row="4" data-col="1" data-solution="P" class="cell"/></td><td><input type="text" maxlength="1" data-row="4" data-col="2" data-solution="O" class="cell"/></td><td><input type="text" maxlength="1" data-row="4" data-col="3" data-solution="L" class="cell"/></td><td><input type="text" maxlength="1" data-row="4" data-col="4" data-solution="I" class="cell"/></td><td><input type="text" maxlength="1" data-row="4" data-col="5" data-solution="T" class="cell"/></td><td><input type="text" maxlength="1" data-row="4" data-col="6" data-solution="I" class="cell"/></td><td><input type="text" maxlength="1" data-row="4" data-col="7" data-solution="K" class="cell"/></td><td class="black"></td></tr>
+<tr><td><div class="number">6</div><input type="text" maxlength="1" data-row="5" data-col="0" data-solution="K" class="cell"/></td><td><input type="text" maxlength="1" data-row="5" data-col="1" data-solution="A" class="cell"/></td><td><input type="text" maxlength="1" data-row="5" data-col="2" data-solution="N" class="cell"/></td><td><input type="text" maxlength="1" data-row="5" data-col="3" data-solution="T" class="cell"/></td><td><input type="text" maxlength="1" data-row="5" data-col="4" data-solution="O" class="cell"/></td><td><input type="text" maxlength="1" data-row="5" data-col="5" data-solution="N" class="cell"/></td><td class="black"></td><td class="black"></td><td class="black"></td></tr>
+<tr><td class="black"></td><td><div class="number">7</div><input type="text" maxlength="1" data-row="6" data-col="1" data-solution="H" class="cell"/></td><td><input type="text" maxlength="1" data-row="6" data-col="2" data-solution="U" class="cell"/></td><td><input type="text" maxlength="1" data-row="6" data-col="3" data-solution="R" class="cell"/></td><td><input type="text" maxlength="1" data-row="6" data-col="4" data-solution="N" class="cell"/></td><td><input type="text" maxlength="1" data-row="6" data-col="5" data-solution="I" class="cell"/></td><td class="black"></td><td class="black"></td><td class="black"></td></tr>
+</table>
+<h3>Waagrecht</h3>
+<ul>
+<li id="a1">1. Hauptstadt des Kantons Aargau.</li>
+<li id="a2">2. Stadt im Aargau, Austragungsort des nationalen Flüchtlingstags.</li>
+<li id="a3">3. Beliebter Sport, der am Flüchtlingstag in Brugg gespielt wird.</li>
+<li id="a4">4. Snack, der beim Cricket-Anlass von Geflüchteten angeboten wird.</li>
+<li id="a5">5. Aargauer ___ bündelt Kräfte für schnellere Baubewilligungen.</li>
+<li id="a6">6. Der Aargau ist ein ___ der Schweiz.</li>
+<li id="a7">7. Nachname des SP-Ständerats Baptiste, dessen Babys Geburt die Abstimmung gefährden könnte.</li>
+</ul>
+<h3>Senkrecht</h3>
+<ul>
+<li id="d1">1. Versteigerung, z. B. der Autonummer «ZH 25».</li>
+</ul>
+<button id="check">Lösung prüfen</button>
+<script>
+const acrossClues = {"1": [[0,4],[0,5],[0,6],[0,7],[0,8]],"2": [[1,2],[1,3],[1,4],[1,5],[1,6]],"3": [[2,0],[2,1],[2,2],[2,3],[2,4],[2,5],[2,6]],"4": [[3,2],[3,3],[3,4],[3,5],[3,6],[3,7]],"5": [[4,1],[4,2],[4,3],[4,4],[4,5],[4,6],[4,7]],"6": [[5,0],[5,1],[5,2],[5,3],[5,4],[5,5]],"7": [[6,1],[6,2],[6,3],[6,4],[6,5]]};
+const downClues = {"1": [[0,4],[1,4],[2,4],[3,4],[4,4],[5,4],[6,4]]};
+const cellToClue = {};
+for (const num in acrossClues) {
+    acrossClues[num].forEach(coord => {
+        const key = coord[0] + '-' + coord[1];
+        if (!cellToClue[key]) cellToClue[key] = {};
+        cellToClue[key].across = num;
+    });
+}
+for (const num in downClues) {
+    downClues[num].forEach(coord => {
+        const key = coord[0] + '-' + coord[1];
+        if (!cellToClue[key]) cellToClue[key] = {};
+        cellToClue[key].down = num;
+    });
+}
+function clearHighlights() {
+    document.querySelectorAll('.cell').forEach(cell => cell.classList.remove('highlight'));
+    document.querySelectorAll('li').forEach(li => li.classList.remove('highlight'));
+}
+document.querySelectorAll('.cell').forEach(cell => {
+    cell.addEventListener('focus', () => {
+        clearHighlights();
+        const r = cell.getAttribute('data-row');
+        const c = cell.getAttribute('data-col');
+        const key = r + '-' + c;
+        const clueRefs = cellToClue[key] || {};
+        if (clueRefs.across) {
+            const num = clueRefs.across;
+            acrossClues[num].forEach(([rr, cc]) => {
+                document.querySelector(`.cell[data-row='${rr}'][data-col='${cc}']`).classList.add('highlight');
+            });
+            document.getElementById('a' + num).classList.add('highlight');
+        }
+        if (clueRefs.down) {
+            const num = clueRefs.down;
+            downClues[num].forEach(([rr, cc]) => {
+                document.querySelector(`.cell[data-row='${rr}'][data-col='${cc}']`).classList.add('highlight');
+            });
+            document.getElementById('d' + num).classList.add('highlight');
+        }
+    });
+});
+document.getElementById('check').addEventListener('click', () => {
+    document.querySelectorAll('.cell').forEach(cell => cell.classList.remove('correct','wrong'));
+    document.querySelectorAll('.cell').forEach(cell => {
+        const sol = cell.getAttribute('data-solution').toUpperCase();
+        const val = cell.value.toUpperCase();
+        if (!val) return;
+        if (val === sol) {
+            cell.classList.add('correct');
+        } else {
+            cell.classList.add('wrong');
+        }
+    });
+});
+</script>
+</body>
+</html>
