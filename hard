@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Kreuzworträtsel (Schwierig)</title>
+<style>
+body { font-family: Helvetica, system-ui, sans-serif; }
+#crossword { border-collapse: collapse; margin-bottom: 1em; }
+#crossword td { border: 1px solid #aaa; width: 2em; height: 2em; text-align: center; vertical-align: middle; position: relative; }
+#crossword td.black { background: #e0e0e0; }
+#crossword .number { position: absolute; top: 0; left: 0; font-size: 0.7em; color: #0066cc; }
+.cell { width: 100%; height: 100%; border: none; font-size: 1em; text-transform: uppercase; }
+.cell:focus { outline: 2px solid #66f; }
+.cell.highlight { background-color: #cceeff; }
+ul { list-style: none; padding-left: 0; }
+ul li { margin: 0.2em 0; }
+ul li.highlight { background: #ffff99; }
+#check { margin-top: 1em; padding: 0.5em 1em; font-size: 1em; }
+.cell.correct { background-color: #d4edda; }
+.cell.wrong { background-color: #f8d7da; }
+</style>
+</head>
+<body>
+<h2>Schwieriges Kreuzworträtsel</h2>
+<table id="crossword">
+<tr><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td><div class="number">1</div><input type="text" maxlength="1" data-row="0" data-col="4" data-solution="I" class="cell"/></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td></tr>
+<tr><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td><input type="text" maxlength="1" data-row="1" data-col="4" data-solution="N" class="cell"/></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td></tr>
+<tr><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td><input type="text" maxlength="1" data-row="2" data-col="4" data-solution="D" class="cell"/></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td></tr>
+<tr><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td><input type="text" maxlength="1" data-row="3" data-col="4" data-solution="I" class="cell"/></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td><div class="number">2</div><input type="text" maxlength="1" data-row="3" data-col="10" data-solution="K" class="cell"/></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td><div class="number">3</div><input type="text" maxlength="1" data-row="3" data-col="17" data-solution="B" class="cell"/></td></tr>
+<tr><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td><input type="text" maxlength="1" data-row="4" data-col="4" data-solution="V" class="cell"/></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td><input type="text" maxlength="1" data-row="4" data-col="10" data-solution="O" class="cell"/></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td><input type="text" maxlength="1" data-row="4" data-col="17" data-solution="U" class="cell"/></td></tr>
+<tr><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td><input type="text" maxlength="1" data-row="5" data-col="4" data-solution="I" class="cell"/></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td><input type="text" maxlength="1" data-row="5" data-col="10" data-solution="N" class="cell"/></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td><input type="text" maxlength="1" data-row="5" data-col="17" data-solution="N" class="cell"/></td></tr>
+<tr><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td><input type="text" maxlength="1" data-row="6" data-col="4" data-solution="D" class="cell"/></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td><input type="text" maxlength="1" data-row="6" data-col="10" data-solution="T" class="cell"/></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td><input type="text" maxlength="1" data-row="6" data-col="17" data-solution="D" class="cell"/></td></tr>
+<tr><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td><input type="text" maxlength="1" data-row="7" data-col="4" data-solution="U" class="cell"/></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td><input type="text" maxlength="1" data-row="7" data-col="10" data-solution="R" class="cell"/></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td><input type="text" maxlength="1" data-row="7" data-col="17" data-solution="E" class="cell"/></td></tr>
+<tr><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td><input type="text" maxlength="1" data-row="8" data-col="4" data-solution="A" class="cell"/></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td><input type="text" maxlength="1" data-row="8" data-col="10" data-solution="O" class="cell"/></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td><input type="text" maxlength="1" data-row="8" data-col="17" data-solution="S" class="cell"/></td></tr>
+<tr><td class="black"></td><td class="black"></td><td class="black"></td><td><div class="number">1</div><input type="text" maxlength="1" data-row="9" data-col="3" data-solution="F" class="cell"/></td><td><input type="text" maxlength="1" data-row="9" data-col="4" data-solution="L" class="cell"/></td><td><input type="text" maxlength="1" data-row="9" data-col="5" data-solution="U" class="cell"/></td><td><input type="text" maxlength="1" data-row="9" data-col="6" data-solution="E" class="cell"/></td><td><input type="text" maxlength="1" data-row="9" data-col="7" data-solution="C" class="cell"/></td><td><input type="text" maxlength="1" data-row="9" data-col="8" data-solution="H" class="cell"/></td><td><input type="text" maxlength="1" data-row="9" data-col="9" data-solution="T" class="cell"/></td><td><input type="text" maxlength="1" data-row="9" data-col="10" data-solution="L" class="cell"/></td><td><input type="text" maxlength="1" data-row="9" data-col="11" data-solution="I" class="cell"/></td><td><input type="text" maxlength="1" data-row="9" data-col="12" data-solution="N" class="cell"/></td><td><input type="text" maxlength="1" data-row="9" data-col="13" data-solution="G" class="cell"/></td><td><input type="text" maxlength="1" data-row="9" data-col="14" data-solution="S" class="cell"/></td><td><input type="text" maxlength="1" data-row="9" data-col="15" data-solution="T" class="cell"/></td><td><input type="text" maxlength="1" data-row="9" data-col="16" data-solution="A" class="cell"/></td><td><input type="text" maxlength="1" data-row="9" data-col="17" data-solution="G" class="cell"/></td></tr>
+<tr><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td><input type="text" maxlength="1" data-row="10" data-col="4" data-solution="B" class="cell"/></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td><input type="text" maxlength="1" data-row="10" data-col="10" data-solution="L" class="cell"/></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td><input type="text" maxlength="1" data-row="10" data-col="17" data-solution="E" class="cell"/></td></tr>
+<tr><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td><input type="text" maxlength="1" data-row="11" data-col="4" data-solution="E" class="cell"/></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td><input type="text" maxlength="1" data-row="11" data-col="10" data-solution="S" class="cell"/></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td><input type="text" maxlength="1" data-row="11" data-col="17" data-solution="R" class="cell"/></td></tr>
+<tr><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td><input type="text" maxlength="1" data-row="12" data-col="4" data-solution="S" class="cell"/></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td><input type="text" maxlength="1" data-row="12" data-col="10" data-solution="C" class="cell"/></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td><input type="text" maxlength="1" data-row="12" data-col="17" data-solution="I" class="cell"/></td></tr>
+<tr><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td><input type="text" maxlength="1" data-row="13" data-col="4" data-solution="T" class="cell"/></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td><input type="text" maxlength="1" data-row="13" data-col="10" data-solution="H" class="cell"/></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td><input type="text" maxlength="1" data-row="13" data-col="17" data-solution="C" class="cell"/></td></tr>
+<tr><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td><input type="text" maxlength="1" data-row="14" data-col="4" data-solution="E" class="cell"/></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td><input type="text" maxlength="1" data-row="14" data-col="10" data-solution="I" class="cell"/></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td><input type="text" maxlength="1" data-row="14" data-col="17" data-solution="H" class="cell"/></td></tr>
+<tr><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td><input type="text" maxlength="1" data-row="15" data-col="4" data-solution="U" class="cell"/></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td><input type="text" maxlength="1" data-row="15" data-col="10" data-solution="L" class="cell"/></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td><input type="text" maxlength="1" data-row="15" data-col="17" data-solution="T" class="cell"/></td></tr>
+<tr><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td><input type="text" maxlength="1" data-row="16" data-col="4" data-solution="E" class="cell"/></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td><input type="text" maxlength="1" data-row="16" data-col="10" data-solution="D" class="cell"/></td><td><input type="text" maxlength="1" data-row="16" data-col="11" data-solution="U" class="cell"/></td><td><input type="text" maxlength="1" data-row="16" data-col="12" data-solution="R" class="cell"/></td><td><input type="text" maxlength="1" data-row="16" data-col="13" data-solution="G" class="cell"/></td><td><input type="text" maxlength="1" data-row="16" data-col="14" data-solution="A" class="cell"/></td><td class="black"></td><td class="black"></td><td class="black"></td></tr>
+<tr><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td><input type="text" maxlength="1" data-row="17" data-col="4" data-solution="R" class="cell"/></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td></tr>
+<tr><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td><input type="text" maxlength="1" data-row="18" data-col="4" data-solution="U" class="cell"/></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td></tr>
+<tr><td class="black"></td><td class="black"></td><td><div class="number">3</div><input type="text" maxlength="1" data-row="19" data-col="2" data-solution="P" class="cell"/></td><td><input type="text" maxlength="1" data-row="19" data-col="3" data-solution="E" class="cell"/></td><td><input type="text" maxlength="1" data-row="19" data-col="4" data-solution="N" class="cell"/></td><td><input type="text" maxlength="1" data-row="19" data-col="5" data-solution="D" class="cell"/></td><td><input type="text" maxlength="1" data-row="19" data-col="6" data-solution="L" class="cell"/></td><td><input type="text" maxlength="1" data-row="19" data-col="7" data-solution="E" class="cell"/></td><td><input type="text" maxlength="1" data-row="19" data-col="8" data-solution="R" class="cell"/></td><td><input type="text" maxlength="1" data-row="19" data-col="9" data-solution="Z" class="cell"/></td><td><input type="text" maxlength="1" data-row="19" data-col="10" data-solution="E" class="cell"/></td><td><input type="text" maxlength="1" data-row="19" data-col="11" data-solution="I" class="cell"/></td><td><input type="text" maxlength="1" data-row="19" data-col="12" data-solution="T" class="cell"/></td><td><input type="text" maxlength="1" data-row="19" data-col="13" data-solution="U" class="cell"/></td><td><input type="text" maxlength="1" data-row="19" data-col="14" data-solution="N" class="cell"/></td><td><input type="text" maxlength="1" data-row="19" data-col="15" data-solution="G" class="cell"/></td><td class="black"></td><td class="black"></td></tr>
+<tr><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td><input type="text" maxlength="1" data-row="20" data-col="4" data-solution="G" class="cell"/></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td><td class="black"></td></tr>
+</table>
+<h3>Waagrecht</h3>
+<ul>
+<li id="a1">1. Nationaler Gedenktag vom 21. Juni (Thema in Brugg: Cricket).</li>
+<li id="a2">2. Vorname des Präsidenten des Aargau Cricket Club.</li>
+<li id="a3">3. Kostenlose Zeitung für Pendler.</li>
+</ul>
+<h3>Senkrecht</h3>
+<ul>
+<li id="d1">1. Neues Steuermodell, das die Heiratsstrafe abschaffen soll.</li>
+<li id="d2">2. Schweizer Ausdruck für Autonummernschild.</li>
+<li id="d3">3. Das höchste Gericht der Schweiz.</li>
+</ul>
+<button id="check">Lösung prüfen</button>
+<script>
+const acrossClues = {"1": [[9,3],[9,4],[9,5],[9,6],[9,7],[9,8],[9,9],[9,10],[9,11],[9,12],[9,13],[9,14],[9,15],[9,16],[9,17]],"2": [[16,10],[16,11],[16,12],[16,13],[16,14]],"3": [[19,2],[19,3],[19,4],[19,5],[19,6],[19,7],[19,8],[19,9],[19,10],[19,11],[19,12],[19,13],[19,14],[19,15]]};
+const downClues = {"1": [[0,4],[1,4],[2,4],[3,4],[4,4],[5,4],[6,4],[7,4],[8,4],[9,4],[10,4],[11,4],[12,4],[13,4],[14,4],[15,4],[16,4],[17,4],[18,4],[19,4],[20,4]],"2": [[3,10],[4,10],[5,10],[6,10],[7,10],[8,10],[9,10],[10,10],[11,10],[12,10],[13,10],[14,10],[15,10],[16,10]],"3": [[3,17],[4,17],[5,17],[6,17],[7,17],[8,17],[9,17],[10,17],[11,17],[12,17],[13,17],[14,17],[15,17]]};
+const cellToClue = {};
+for (const num in acrossClues) {
+    acrossClues[num].forEach(coord => {
+        const key = coord[0] + '-' + coord[1];
+        if (!cellToClue[key]) cellToClue[key] = {};
+        cellToClue[key].across = num;
+    });
+}
+for (const num in downClues) {
+    downClues[num].forEach(coord => {
+        const key = coord[0] + '-' + coord[1];
+        if (!cellToClue[key]) cellToClue[key] = {};
+        cellToClue[key].down = num;
+    });
+}
+function clearHighlights() {
+    document.querySelectorAll('.cell').forEach(cell => cell.classList.remove('highlight'));
+    document.querySelectorAll('li').forEach(li => li.classList.remove('highlight'));
+}
+document.querySelectorAll('.cell').forEach(cell => {
+    cell.addEventListener('focus', () => {
+        clearHighlights();
+        const r = cell.getAttribute('data-row');
+        const c = cell.getAttribute('data-col');
+        const key = r + '-' + c;
+        const clueRefs = cellToClue[key] || {};
+        if (clueRefs.across) {
+            const num = clueRefs.across;
+            acrossClues[num].forEach(([rr, cc]) => {
+                document.querySelector(`.cell[data-row='${rr}'][data-col='${cc}']`).classList.add('highlight');
+            });
+            document.getElementById('a' + num).classList.add('highlight');
+        }
+        if (clueRefs.down) {
+            const num = clueRefs.down;
+            downClues[num].forEach(([rr, cc]) => {
+                document.querySelector(`.cell[data-row='${rr}'][data-col='${cc}']`).classList.add('highlight');
+            });
+            document.getElementById('d' + num).classList.add('highlight');
+        }
+    });
+});
+document.getElementById('check').addEventListener('click', () => {
+    document.querySelectorAll('.cell').forEach(cell => cell.classList.remove('correct', 'wrong'));
+    document.querySelectorAll('.cell').forEach(cell => {
+        const sol = cell.getAttribute('data-solution').toUpperCase();
+        const val = cell.value.toUpperCase();
+        if (!val) return;
+        if (val === sol) {
+            cell.classList.add('correct');
+        } else {
+            cell.classList.add('wrong');
+        }
+    });
+});
+</script>
+</body>
+</html>
